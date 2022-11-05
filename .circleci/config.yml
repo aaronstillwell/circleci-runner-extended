@@ -12,6 +12,7 @@ jobs:
       - docker/check
       - docker/build:
           image: aaronstillwell/circleci-runner-extended
+          tag: $CIRCLE_SHA1,latest
       - docker/push:
           image: aaronstillwell/circleci-runner-extended
           tag: $CIRCLE_SHA1,latest
