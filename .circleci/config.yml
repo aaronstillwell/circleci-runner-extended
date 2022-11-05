@@ -9,6 +9,7 @@ jobs:
       image: ubuntu-2004:current
     steps:
       - checkout
+      - docker/check
       - docker/build:
           image: aaronstillwell/circleci-runner-extended
       - docker/push:
