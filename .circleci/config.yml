@@ -1,0 +1,21 @@
+version: 2.1
+
+orbs:
+  docker: circleci/docker@2.1.4
+
+jobs:
+  build-and-deploy:
+    machine:
+      image: ubuntu-2004:current
+    steps:
+      - checkout
+      - docker/build:
+          name: aaronstillwell/circleci-runner-extended
+      - docker/push:
+          image: aaronstillwell/circleci-runner-extended
+
+workflows:
+  default:
+    jobs:
+      - build-and-deploy
+# VS Code Extension Version: 1.0.1
