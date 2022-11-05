@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - docker/build:
-          name: aaronstillwell/circleci-runner-extended
+          image: aaronstillwell/circleci-runner-extended
       - docker/push:
           image: aaronstillwell/circleci-runner-extended
 
