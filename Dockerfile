@@ -1,4 +1,4 @@
-FROM circleci/runner:launch-agent
+FROM circleci/runner-agent:machine-3
 
 RUN sudo apt update && \
   sudo apt install -y software-properties-common && \
